@@ -1,0 +1,30 @@
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: rgb(33, 67, 87);
+  box-shadow: rgba(242, 243, 156, 0.205) 0px 1px 0px, rgba(243, 220, 156, 0.507) 0px 4px 10px;
+
+  a {
+    font-size: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: rgb(246, 247, 202);
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+
+  a,
+  button,
+  span {
+    display: flex;
+    padding: 1em;
+
+    &:first-child {
+      margin-right: auto;
+    }
+  }
+  button {
+    border: 0;
+  }
+}
