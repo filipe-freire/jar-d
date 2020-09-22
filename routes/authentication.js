@@ -52,9 +52,14 @@ router.post('/sign-in', (req, res, next) => {
     });
 });
 
-router.post('/sign-out', (req, res, next) => {
+router.post('/sign-out', (req, res) => {
   req.session.destroy();
   res.json({});
+});
+
+router.get('/me', (req, res) => {
+  const user = req.user;
+  res.json({ user });
 });
 
 module.exports = router;
