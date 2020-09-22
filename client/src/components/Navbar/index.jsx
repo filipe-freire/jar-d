@@ -9,7 +9,7 @@ const NavBar = props => {
       <Link to="/jarSystemInfo">Jar System</Link>
       {(props.user && (
         <>
-          <span>{props.user.name}</span>
+          <Link to="/profile">{props.user.name}</Link>
           <button onClick={props.onSignOut}>Sign Out</button>
         </>
       )) || (

@@ -9,6 +9,7 @@ import ErrorView from './views/ErrorView';
 import JarSystemInfoView from './views/JarSystemInfoView';
 import AuthSignUpView from './views/Authentication/SignUpView';
 import AuthSignInView from './views/Authentication/SignInView';
+import ProfileView from './views/Profile/ProfileView';
 
 /* ------ Components ------ */
 import NavBar from './components/Navbar';
@@ -74,6 +75,14 @@ class App extends Component {
                 path="/authentication/sign-in"
                 render={props => <AuthSignInView {...props} onUserUpdate={this.handleUserUpdate} />}
                 authorized={!this.state.user}
+                redirect="/"
+              />
+
+              {/* User Profile */}
+              <ProtectedRoute
+                path="/profile"
+                render={props => <ProfileView {...props} user={this.state.user} />}
+                authorized={this.state.user}
                 redirect="/"
               />
 
