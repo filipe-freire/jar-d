@@ -1,16 +1,20 @@
+$clr-nav-background: rgb(29, 29, 29);
+$clr-nav-text: rgb(246, 247, 202);
+
 nav {
   display: flex;
   position: sticky;
   top: 0;
   margin-bottom: 2em;
-  background-color: rgb(33, 67, 87);
-  box-shadow: rgba(242, 243, 156, 0.205) 0px 1px 0px, rgba(243, 220, 156, 0.507) 0px 4px 10px;
+  background-color: $clr-nav-background;
+  box-shadow: $clr-nav-background 0px 1px 0px, rgba(15, 14, 10, 0.788) 0px 6px 20px;
 
-  a {
+  a,
+  button {
     font-size: inherit;
     font-family: inherit;
     text-decoration: none;
-    color: rgb(246, 247, 202);
+    color: $clr-nav-text;
     font-weight: bold;
     letter-spacing: 0.1em;
   }
@@ -20,6 +24,7 @@ nav {
   span {
     display: flex;
     padding: 1em;
+    align-items: center;
 
     &:nth-child(2) {
       margin-right: auto;

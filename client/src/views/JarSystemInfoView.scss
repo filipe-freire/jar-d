@@ -1,0 +1,39 @@
+$clr-card-background: rgb(230, 228, 159);
+$clr-card-text: rgb(5, 16, 39);
+$clr-card-border: rgba(146, 142, 119, 0.76);
+
+.card-container {
+  padding: 2em;
+
+  .card {
+    // padding: 1em;
+    background-color: $clr-card-background;
+    border: 1px solid $clr-card-border;
+    box-shadow: rgba(200, 240, 188, 0.336) 0px 6px 15px 0px;
+    border-radius: 5px;
+    color: $clr-card-text;
+
+    & + .card {
+      margin-top: 1.5em;
+    }
+
+    .jar-info-container {
+      width: 100%;
+      padding: 0em 1em 1em;
+      background-color: lighten($clr-card-background, $amount: 8%);
+
+      .jar-info-title {
+        margin-top: 0;
+        padding-top: 0.5em;
+      }
+
+      .jar-info-text {
+        font-weight: 500;
+        margin-bottom: 0;
+        padding: 0 0.5em 1em;
+        line-height: 1.7;
+        text-align: justify;
+      }
+    }
+  }
+}
