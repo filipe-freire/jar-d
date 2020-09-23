@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { checkUser, signOut } from './services/authentication';
-import './App.css';
+import './App.scss';
 
 /* ------ Views ------ */
 import HomeView from './views/HomeView';

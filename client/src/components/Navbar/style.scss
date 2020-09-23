@@ -3,6 +3,7 @@ $clr-nav-text: rgb(246, 247, 202);
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   position: sticky;
   top: 0;
   margin-bottom: 2em;
@@ -15,8 +16,9 @@ nav {
     font-family: inherit;
     text-decoration: none;
     color: $clr-nav-text;
-    font-weight: bold;
+    font-weight: 300;
     letter-spacing: 0.1em;
+    border: none;
   }
 
   a,
@@ -30,7 +32,9 @@ nav {
       margin-right: auto;
     }
   }
-  button {
-    border: 0;
+
+  #user-name {
+    font-weight: 500;
+    color: rgb(143, 227, 255);
   }
 }
