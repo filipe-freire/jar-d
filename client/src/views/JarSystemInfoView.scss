@@ -1,39 +1,57 @@
-$clr-card-background: rgb(230, 228, 159);
+$clr-card-background: rgba(252, 250, 188, 0.938);
 $clr-card-text: rgb(5, 16, 39);
 $clr-card-border: rgba(146, 142, 119, 0.76);
+$clr-boxShadow: #000;
 
 .card-container {
   padding: 2em;
+  display: flex;
+  gap: 3em;
+  flex-wrap: wrap;
 
   .card {
-    // padding: 1em;
+    margin: 0 auto;
+    max-width: 500px;
     background-color: $clr-card-background;
-    border: 1px solid $clr-card-border;
-    box-shadow: rgba(200, 240, 188, 0.336) 0px 6px 15px 0px;
-    border-radius: 5px;
+    // border: 1px solid $clr-card-border;
+    box-shadow: $clr-boxShadow 0px 2px 12px 0px;
+    // border-radius: 5px;
     color: $clr-card-text;
 
     & + .card {
       margin-top: 1.5em;
     }
 
+    img {
+      box-shadow: $clr-boxShadow 0px 0px 4px 0px;
+    }
+
     .jar-info-container {
       width: 100%;
       padding: 0em 1em 1em;
-      background-color: lighten($clr-card-background, $amount: 8%);
 
       .jar-info-title {
         margin-top: 0;
-        padding-top: 0.5em;
+        padding-top: 1em;
       }
 
       .jar-info-text {
         font-weight: 500;
         margin-bottom: 0;
-        padding: 0 0.5em 1em;
+        padding: 0.5em 0.5em;
+        border-top: 2px groove black;
+        border-bottom: 2px groove black;
         line-height: 1.7;
         text-align: justify;
       }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .card-container {
+    .card + .card {
+      margin-top: 0;
     }
   }
 }

@@ -56,15 +56,18 @@ const HomeView = () => {
               <p className="jar-info-text">
                 Financial freedom. The money that you put into this jar is used for investments and
                 building your passive income streams. You never spend this money. The only time you
-                would spend this money is once you become financially free. Even then you would only
-                spend the returns on your investment. Never spend the principal.
+                would spend this money is once you become financially free.{' '}
+                <p>
+                  Even then you would only spend the returns on your investment. Never spend the
+                  principal.
+                </p>
               </p>
             </div>
           </div>
           <div className="card">
             <img
               className="jar-img"
-              src="https://images.pexels.com/photos/1750566/pexels-photo-1750566.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+              src="https://images.pexels.com/photos/115001/pexels-photo-115001.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
               alt="Educate Yourself Jar"
             />
             <div className="jar-info-container">
