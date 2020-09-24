@@ -1,6 +1,6 @@
-$clr-nav-background: rgb(29, 29, 29);
-$clr-nav-text: rgb(246, 247, 202);
-$clr-hover-link: aquamarine;
+$clr-nav-background: #1d1d1d;
+$clr-nav-text: #f6f7ca;
+$clr-hover-link: #7fffd4;
 
 nav {
   display: flex;
@@ -9,7 +9,7 @@ nav {
   top: 0;
   margin-bottom: 2em;
   background-color: $clr-nav-background;
-  box-shadow: $clr-nav-background 0px 1px 0px, rgba(15, 14, 10, 0.788) 0px 6px 20px;
+  box-shadow: $clr-nav-background 0px 1px 0px, #0f0e0ac9 0px 6px 20px;
 
   a,
   button {

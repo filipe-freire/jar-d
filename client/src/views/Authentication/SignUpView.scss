@@ -1,5 +1,7 @@
-$clr-form-background: #544994;
-$clr-form-shadow: rgba(90, 161, 194, 0.61);
+$clr-form-shadow: #544994;
+$clr-form-background: #cde5ec;
+$clr-form-shadow: #5aa1c29c;
+$clr-form-text: #282c34;
 
 #form-signup {
   & > h1 {
@@ -8,13 +10,13 @@ $clr-form-shadow: rgba(90, 161, 194, 0.61);
   }
 
   & > form {
-    background-color: rgb(205, 229, 236);
+    background-color: $clr-form-background;
     padding: 1.2em 2em 2em;
-    border: 2px solid $clr-form-background;
+    border: 2px solid $clr-form-shadow;
     border-radius: 10px;
-    color: #282c34;
+    color: $clr-form-text;
     font-weight: 500;
     font-size: 1.5em;
-    box-shadow: $clr-form-background 0px 1px 0px, $clr-form-shadow 0px 2px 20px;
+    box-shadow: $clr-form-shadow 0px 1px 0px, $clr-form-shadow 0px 2px 20px;
   }
 }
