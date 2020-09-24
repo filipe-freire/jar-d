@@ -1,3 +1,24 @@
+/* ---------- CUSTOM VARIABLES ---------- */
+
+/* -> TEXT  */
+$clr-text-primary: rgb(235, 240, 208);
+$clr-background: #282c34;
+
+/* -> BUTTONS  */
+$clr-btn-primary: #222d42;
+$clr-btn-hover-primary: #354666;
+
+/* --------- BOOTSTRAP STYLING OVERRIDE --------- */
+
+.btn-primary {
+  background-color: $clr-btn-primary;
+}
+
+.btn-primary:hover {
+  background-color: $clr-btn-hover-primary;
+}
+
+/* --------- STYLING NORMALIZATION --------- */
 *,
 *::before,
 *::after {
@@ -12,8 +33,8 @@ body {
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-  color: rgb(235, 240, 208);
+  background-color: $clr-background;
+  color: $clr-text-primary;
 }
 
 code {
@@ -34,15 +55,4 @@ form {
   textarea {
     margin-bottom: 1em;
   }
-}
-
-input,
-textarea,
-button {
-  border: 1px solid lightgray;
-  font: inherit;
-  color: inherit;
-  line-height: inherit;
-  background-color: transparent;
-  padding: 1em;
 }

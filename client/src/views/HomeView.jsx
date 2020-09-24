@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeView = props => {
   return (
-    <div>
+    <>
       <header className="App-header">
         <h1>JAR'D</h1>
         <p>
@@ -19,7 +19,8 @@ const HomeView = props => {
           .
         </p>
       </header>
-    </div>
+      <main></main>
+    </>
   );
 };
 

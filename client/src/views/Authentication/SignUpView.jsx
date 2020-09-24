@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { signUp } from './../../services/authentication';
+import { Button, Form } from 'react-bootstrap';
+import './SignUpView.scss';
 
 class AuthenticationSignUpView extends Component {
   constructor() {
@@ -34,39 +36,49 @@ class AuthenticationSignUpView extends Component {
 
   render() {
     return (
-      <div>
+      <div id="form-signup">
+        <h1>Sign Up</h1>
         <form onSubmit={this.handleFormSubmission}>
-          <label htmlFor="input-name">Full Name</label>
-          <input
-            id="input-name"
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            value={this.state.name}
-            onChange={this.handleInputChange}
-          />
-
-          <label htmlFor="input-email">Email</label>
-          <input
-            id="input-email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleInputChange}
-          />
-
-          <label htmlFor="input-password">Password</label>
-          <input
-            id="input-password"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />
-
-          <button>Sign Up</button>
+          <Form.Group controlId="formBasicName">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+            />
+          </Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              minLength="3"
+            />
+          </Form.Group>
+          {/* <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group> */}
+          <Button variant="primary" type="submit">
+            Sign Up
+          </Button>
         </form>
       </div>
     );
