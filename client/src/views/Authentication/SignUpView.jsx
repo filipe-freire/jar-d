@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { signUp } from './../../services/authentication';
 import { Button, Form } from 'react-bootstrap';
-import './SignUpView.scss';
+import './style.scss';
 
 class AuthenticationSignUpView extends Component {
   constructor() {
@@ -36,7 +36,7 @@ class AuthenticationSignUpView extends Component {
 
   render() {
     return (
-      <div id="form-signup">
+      <div className="form-component">
         <h1>Sign Up</h1>
         <form onSubmit={this.handleFormSubmission}>
           <Form.Group controlId="formBasicName">

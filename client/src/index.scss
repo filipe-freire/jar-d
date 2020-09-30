@@ -7,6 +7,8 @@ $clr-background: #282c34;
 /* -> BUTTONS  */
 $clr-btn-primary: #222d42;
 $clr-btn-hover-primary: #354666;
+$clr-btn-secondary: #c4631e;
+$clr-btn-hover-secondary: #bd4c18;
 
 /* --------- BOOTSTRAP STYLING OVERRIDE --------- */
 
@@ -16,6 +18,14 @@ $clr-btn-hover-primary: #354666;
 
 .btn-primary:hover {
   background-color: $clr-btn-hover-primary;
+}
+
+.btn-secondary {
+  background-color: $clr-btn-secondary;
+}
+
+.btn-secondary:hover {
+  background-color: $clr-btn-hover-secondary;
 }
 
 /* --------- STYLING NORMALIZATION --------- */

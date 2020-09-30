@@ -10,6 +10,7 @@ nav {
   margin-bottom: 2em;
   background-color: $clr-nav-background;
   box-shadow: $clr-nav-background 0px 1px 0px, #0f0e0ac9 0px 6px 20px;
+  z-index: 10;
 
   a,
   button {

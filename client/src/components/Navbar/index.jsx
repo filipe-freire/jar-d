@@ -10,7 +10,9 @@ const NavBar = props => {
       {(props.user && (
         <>
           <Link id="user-name" to="/profile">{`Welcome, ${props.user.name}`}</Link>
-          <button onClick={props.onSignOut}>Sign Out</button>
+          <button className="btn-secondary" onClick={props.onSignOut}>
+            Sign Out
+          </button>
         </>
       )) || (
         <>

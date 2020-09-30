@@ -3,7 +3,7 @@ $clr-form-background: #cde5ec;
 $clr-form-shadow: #5aa1c29c;
 $clr-form-text: #282c34;
 
-#form-signup {
+.form-component {
   & > h1 {
     margin: 1em auto 0.7em;
     font-size: 3.2em;

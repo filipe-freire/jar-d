@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { signIn } from './../../services/authentication';
+import { Button, Form } from 'react-bootstrap';
+import './style.scss';
 
 class AuthenticationSignInView extends Component {
   constructor() {
@@ -37,30 +39,36 @@ class AuthenticationSignInView extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-component">
+        <h1>Sign In</h1>
         <form onSubmit={this.handleFormSubmission}>
-          <label htmlFor="input-email">Email</label>
-          <input
-            id="input-email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleInputChange}
-            required
-          />
-
-          <label htmlFor="input-password">Password</label>
-          <input
-            id="input-password"
-            type="password"
-            name="password"
-            placeholder="Password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-            required
-            // minLength="8"
-          />
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+            />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              minLength="3"
+            />
+          </Form.Group>
+          {/* <Form.Group controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Check me out" />
+          </Form.Group> */}
 
           {this.state.error && (
             <div className="error-block">
@@ -69,7 +77,9 @@ class AuthenticationSignInView extends Component {
             </div>
           )}
 
-          <button>Sign In</button>
+          <Button variant="primary" type="submit">
+            Sign In
+          </Button>
         </form>
       </div>
     );
