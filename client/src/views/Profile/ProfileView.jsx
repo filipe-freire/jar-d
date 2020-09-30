@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Layout from '../../components/Layout';
 
 export class ProfileView extends Component {
   constructor() {
@@ -15,13 +16,15 @@ export class ProfileView extends Component {
   render() {
     const user = this.props.user;
     return (
-      <div>
+      <>
         {(this.state.loaded && (
-          <>
-            <h1>{user.name}'s Profile</h1>
-          </>
+          <Layout headerTitle={`${user.name}'s Profile`}>
+            <div className="container">
+              <h2>Welcome to your Dashboard</h2>
+            </div>
+          </Layout>
         )) || <p>Loading...</p>}
-      </div>
+      </>
     );
   }
 }

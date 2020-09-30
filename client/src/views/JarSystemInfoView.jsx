@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
 import './JarSystemInfoView.scss';
 import Layout from './../components/Layout';
 
@@ -22,7 +22,7 @@ const HomeView = () => {
               things like your rent, mortgage, utilities, bills, taxes, food, clothes, etc.
               Basically it includes anything that you need to live, the necessities.
             </p>
-            <Button variant="primary">Click Me!</Button>
+            {/* <Button variant="primary">Click Me!</Button> */}
           </div>
         </div>
         <div className="card">
